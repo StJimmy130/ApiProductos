@@ -10948,11 +10948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos\\ApiProductos\\ApiProductos.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos2.0\\ApiProductos\\ApiProductos.csproj",
       "projectName": "ApiProductos",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos\\ApiProductos\\ApiProductos.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos2.0\\ApiProductos\\ApiProductos.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos\\ApiProductos\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos2.0\\ApiProductos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"

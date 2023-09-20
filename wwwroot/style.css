@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(0, 218, 170);
+    margin-top: 1.5rem;
+}
+h1{
+    font-size: 45px;
+    color: white;
+    text-align: center;
+}
+hr{
+    height: 3px !important;
+    color: white;
+    opacity: 1;
+    border-radius: 8px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.boton1{
+    background-color: #31b82c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .4s;
+}
+.boton1:hover{
+    color: white;
+    background-color: green;
+    transition: .4s;
+}
+.botonEliminar{
+    background-color: rgb(192, 83, 83);
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .4s;
+}
+.botonEliminar:hover{
+    background-color: red;
+    transition: .4s;
+}
+.botonEditar{
+    background-color: rgb(83, 90, 192);
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .4s;
+}
+.botonEditar:hover{
+    background-color: blue;
+    transition: .4s;
+}
+.border-table{
+    border-color: white;
+}
+
+.tituloModal{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}

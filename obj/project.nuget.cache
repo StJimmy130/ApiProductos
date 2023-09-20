@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KM9Mb+sdTu2g9/tr/5wZ6Sd+JGVc1yu0GgQlnCL5C0gtVJ02QOk2nWrn4qblpovPZHhSyeuTafZI0DvW+BndiA==",
+  "dgSpecHash": "TXr6vxc1KsqGEGJQbvfkgpWnm7gZ7NOqwpOFjE7EGDjL7Ajt3DcQcREHRjcjxMQXFqLxo47gPjsjTRzLATTdCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos\\ApiProductos\\ApiProductos.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Desarrollo de Software\\Programación\\ApiProductos2.0\\ApiProductos\\ApiProductos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

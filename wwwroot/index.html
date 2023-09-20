@@ -4,77 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <title>Productos</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jQuery.js"></script>
     <script src="js/ProductosItem.js"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
 
-      <!-- <section id="Home">
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
+<body class="container fondo">
+    <h1>Listado de productos</h1>
+    <hr>
+    
+    <button class="btn boton1 mb-3" data-bs-toggle="modal" data-bs-target="#agregarProducto"><b>Agregar nuevo producto</b></button>
+
+    <table class="table table-dark table-striped border-table">
+        <thead>
+            <tr>
+                <th>Nombre del producto</th>
+                <th>Precio</th>
+                <th>¿Es nuevo?</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="Productos"></tbody>
+    </table>
+    
+
+
+    <!-- MODAL AGREGAR-->
+    <div class="modal fade" id="agregarProducto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="tituloModal" id="exampleModalLabel">Nuevo producto</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="javascript:void(0);" method="post" class="input-group">
+                            <div class="col-md-12 mb-3">
+                                <input type="text" id="nombre" class="form-control" placeholder="Nombre del producto">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" id="precio" class="form-control" placeholder="Precio">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="esNuevo" value="false" class="form-check-input mt-0">
+                                        <label for="">¿Este producto es nuevo?</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="AgregarProducto();">Guardar</button>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-      </section> -->
+        </div>
+    </div>
 
-      <button onclick="buscarTodasLasTareas();" class="btn btn-info">Buscar todas las tareas</button>
+    <!-- MODAL EDITAR -->
+    <div class="modal fade" id="editarProducto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="tituloModal">Editar Producto</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="javascript:void(0);" method="post" class="input-group">
+                            <div class="col-md-12 mb-3">
+                                <input type="number" id="idEditar" class="form-control" readonly>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="text" id="nombreEditar" class="form-control" placeholder="Nombre del producto">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="number" id="precioEditar" class="form-control" placeholder="Precio">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="esNuevoEditar" value="false" class="form-check-input mt-0">
+                                        <label for="">¿Este producto es nuevo?</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="editarProducto();">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = obtenerProductos();
+    </script>
 </body>
 </html>
